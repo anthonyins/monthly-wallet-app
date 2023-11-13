@@ -59,7 +59,7 @@ window.addEventListener("load", () => {
 
   console.log(harcamaListesi);
   //? Tarih inputunu bugun deger ile yukle
-  // tarihInput.valueAsDate = new Date();
+  tarihInput.valueAsDate = new Date();
 
   //? Degisen bilgileri hesapla ve DOM'a bas
   hesaplaVeGuncelle();
