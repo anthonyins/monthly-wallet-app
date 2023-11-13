@@ -14,12 +14,11 @@ const harcamaAlaniInput = document.getElementById("harcama-alani");
 const tarihInput = document.getElementById("tarih");
 const miktarInput = document.getElementById("miktar");
 
-tarihInput.max = `${new Date().toLocaleDateString("en-ca").replaceAll(".", "-")}`;//inputun max attribute u değer olarak bekledği tarih formatına uyarladık => 2023-01-20T23:59:00 
+tarihInput.max = `${new Date().toLocaleDateString("en-ca").replaceAll(".", "-")}`;
 
 const month =new Date().getMonth() < 9 ? "0" + (Number(new Date().getMonth()) + 1): (Number(new Date().getMonth()) + 1);//getMonth() metodu 0 - 11 arasında değer döndüğü için burada algoritma kurup içinde bulunduğumuz ayın tek haneli olup olmadığını yakalyıp tek haneliyse başına 0 ekliyoruz ve gelen değere asıl ayı bulmak için 1 ekliyoruz.
 
-tarihInput.min = `${new Date().getFullYear()}-${month}-01`;//gün ve saat sabit olduğu için ay ve yıl bilgisini dinamik bir şekilde alıyoruz
-
+tarihInput.min = `${new Date().getFullYear()}-${month}-01`;
 //? Haracama Tablosu
 const harcamaBody = document.getElementById("harcama-body");
 const temizleBtn = document.getElementById("temizle-btn");
